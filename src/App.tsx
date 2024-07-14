@@ -8,11 +8,18 @@ function App() {
     author: "",
     reference: "",
   });
+  const [favorites, setFavorites] = useState([]);
+  const [showFavorites, setShowFavorites] = useState(false);
 
   useEffect(() => {
     const today = new Date().toISOString().slice(0, 10);
     const storedDate = localStorage.getItem("date");
     const storedIndex = localStorage.getItem("quoteIndex");
+    const storedFavorites = JSON.parse(
+      localStorage.getItem("favorites") || "[]"
+    );
+
+    setFavorites(storedFavorites);
 
     if (today !== storedDate) {
       let randomIndex = Math.floor(Math.random() * quotes.length);
@@ -30,14 +37,52 @@ function App() {
     }
   }, []);
 
+  const addToFavorites = () => {
+    const isFavorite = favorites.some(
+      (fav) =>
+        fav.quote === dailyQuote.quote && fav.author === dailyQuote.author);
+
+    if (!isFavorite) {
+      const newFavorites = [...favorites, dailyQuote];
+      setFavorites(newFavorites);
+      localStorage.setItem("favorites", JSON.stringify(newFavorites));
+    }
+  };
+
+  const toggleFavorites = () => {
+    setShowFavorites(!showFavorites); 
+  };
+
   return (
     <div>
       <blockquote>
-        <span className="quote">{dailyQuote.quote}</span>
+        <p>{dailyQuote.quote}</p>
         <footer>
           {dailyQuote.author}, <cite>{dailyQuote.reference}</cite>
         </footer>
       </blockquote>
+      <button onClick={addToFavorites}>Add to Favorites</button>
+      <button onClick={toggleFavorites}>
+        {showFavorites ? "Hide Favorites" : "Show Favorites"}
+      </button>
+      {showFavorites && (
+        <div>
+          <h2>Favorites</h2>
+          <ul>
+            {favorites.map((fav, index) => (
+              <li key={index}>
+                <blockquote>
+                  <p>{fav.today}</p>
+                  <p>{fav.quote}</p>
+                  <footer>
+                    {fav.author}, <cite>{fav.reference}</cite>
+                  </footer>
+                </blockquote>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
