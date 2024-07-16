@@ -4,17 +4,25 @@
 }
 
 blockquote {
-  font-family: "Times New Playwrite PE", serif;
+  font-family: "Ramona-Light", sans-serif;
   font-size: 1.5rem;
   text-align: center;
-  margin: 50px auto;
+  margin: 25px auto;
   padding: 20px;
   max-width: 600px;
-  background-color: rgb(189, 189, 189);
+  background: rgb(120, 140, 242);
+  background: linear-gradient(
+    133deg,
+    rgba(120, 140, 242, 1) 0%,
+    rgba(223, 143, 159, 1) 100%
+  );
+  border-radius: 15px;
 }
 
 footer {
-  margin-top: 20px;
+  font-family: "Ramona-Bold", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 cite {

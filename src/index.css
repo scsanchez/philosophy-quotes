@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Ramona';
+    src: url('./src/fonts/Ramona-Bold-ttf') format('ttf'),
+         url('./src/fonts/Ramona-Light.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }

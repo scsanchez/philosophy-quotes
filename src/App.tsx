@@ -60,10 +60,10 @@ function App() {
             style={{ fontSize: "2em", display: "inline-block" }}
           />
         </span>
-        <footer>
-          {dailyQuote.author}, <cite>{dailyQuote.reference}</cite>
-        </footer>
       </blockquote>
+      <footer>
+        {dailyQuote.author}, <cite>{dailyQuote.reference}</cite>
+      </footer>
     </div>
   );
 }
