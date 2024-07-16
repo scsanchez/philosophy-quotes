@@ -11,6 +11,12 @@ const getInitialDailyQuote = () => {
 
   if (today === storedDate && storedIndex !== null) {
     initialQuote = quotes[parseInt(storedIndex, 10)];
+  } else {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    initialQuote = quotes[randomIndex];
+    
+    localStorage.setItem("date", today);
+    localStorage.setItem("quoteIndex", randomIndex.toString());
   }
 
   return initialQuote;
@@ -41,9 +47,6 @@ function App() {
       setDailyQuote(quotes[randomIndex]);
       localStorage.setItem("date", today);
       localStorage.setItem("quoteIndex", randomIndex.toString());
-    } else {
-      const lastQuote = quotes[storedIndex ? parseInt(storedIndex, 10) : 0];
-      setDailyQuote(lastQuote);
     }
   }, []);
 
