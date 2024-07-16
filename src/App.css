@@ -1,24 +1,23 @@
 .quote {
   position: relative;
   display: inline;
-  
 }
 
 blockquote {
-  font-family: 'Times New Playwrite PE', serif; 
+  font-family: "Times New Playwrite PE", serif;
   font-size: 1.5rem;
   text-align: center;
-  margin: 50px auto; 
+  margin: 50px auto;
   padding: 20px;
   max-width: 600px;
   background-color: rgb(189, 189, 189);
 }
 
 footer {
-  font-style: italic;
   margin-top: 20px;
 }
 
 cite {
+  font-style: italic;
   color: #0d0d0d;
 }
