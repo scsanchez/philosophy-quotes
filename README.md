@@ -1,107 +1,66 @@
-# Equi-Ethos
+# Philosophy Quotes
 
-Este es el repositorio del proyecto **Philosophy Quotes**, desarrollado con [Vite](https://vitejs.dev/), una herramienta rápida para la construcción de aplicaciones web modernas. Este proyecto puede ser utilizado como punto de partida para desarrollar tu propia aplicación de citas filosóficas.
+Philosophy Quotes es una aplicación que muestra citas de filósofos famosos de manera dinámica e interactiva. El proyecto está desarrollado con React y TypeScript, proporcionando una experiencia fluida y agradable para los usuarios.
 
+## Características
 
-## Requisitos previos
+- **Animación de texto**: Utiliza el paquete `react-type-animation` para mostrar las citas de manera atractiva.
+- **Desarrollado con React**: Implementado con React 18 para una interfaz de usuario eficiente.
+- **Escritura tipada**: Construido con TypeScript para mejorar la robustez y la calidad del código.
+- **Código limpio y validado**: ESLint se utiliza para garantizar un código bien estructurado y sin errores.
 
-Asegúrate de tener instalados los siguientes requisitos antes de continuar:
+## Tecnologías utilizadas
 
-- **Node.js** (versión 14.0.0 o superior)
-- **npm** (gestor de paquetes de Node.js) o **yarn**
+- **React**: ^18.3.1
+- **TypeScript**: ^5.2.2
+- **Vite**: ^5.3.1
+- **ESLint**: ^8.57.0
 
-## Instalación
+## Scripts disponibles
 
-1. **Clona el repositorio**:
+- `dev`: Inicia el servidor de desarrollo con Vite.
+- `build`: Compila el proyecto utilizando TypeScript y construye los archivos de producción.
+- `lint`: Ejecuta ESLint para analizar el código y asegurarse de que sigue las reglas definidas.
+- `preview`: Inicia una versión de previsualización del proyecto construida.
 
-   ```bash
-   git clone https://github.com/scsanchez/philosophy-quotes.git
-   ```
+## Cómo ejecutar el proyecto
 
-2. **Navega al directorio del proyecto**:
+1. Clona el repositorio:
+    ```bash
+    git clone https://github.com/usuario/philosophy-quotes.git
+    ```
 
-   ```bash
-   cd philosophy-quotes
-   ```
+2. Instala las dependencias:
+    ```bash
+    npm install
+    ```
 
-3. **Instala las dependencias**:
+3. Inicia el servidor de desarrollo:
+    ```bash
+    npm run dev
+    ```
 
-   Si usas `npm`:
+4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.
 
-   ```bash
-   npm install
-   ```
+## Dependencias
 
-   O si prefieres usar `yarn`:
+- **React**: ^18.3.1
+- **React DOM**: ^18.3.1
+- **react-type-animation**: ^3.2.0
 
-   ```bash
-   yarn install
-   ```
+### Dependencias de desarrollo
 
-## Uso
+- **@types/react**: ^18.3.3
+- **@types/react-dom**: ^18.3.0
+- **@typescript-eslint/eslint-plugin**: ^7.13.1
+- **@typescript-eslint/parser**: ^7.13.1
+- **@vitejs/plugin-react-swc**: ^3.5.0
+- **eslint**: ^8.57.0
+- **eslint-plugin-react-hooks**: ^4.6.2
+- **eslint-plugin-react-refresh**: ^0.4.7
+- **typescript**: ^5.2.2
+- **vite**: ^5.3.1
 
-### Desarrollo
+## Contribuciones
 
-Para iniciar el servidor de desarrollo, ejecuta:
-
-```bash
-npm run dev
-```
-
-o con `yarn`:
-
-```bash
-yarn dev
-```
-
-Esto abrirá el proyecto en un servidor local y deberías ver la aplicación en tu navegador en la siguiente URL:
-
-```
-http://localhost:3000
-```
-
-### Construcción para Producción
-
-Para construir la aplicación para producción, ejecuta:
-
-```bash
-npm run build
-```
-
-o con `yarn`:
-
-```bash
-yarn build
-```
-
-Esto generará una versión optimizada de la aplicación en el directorio `dist`. Puedes desplegar estos archivos en cualquier servidor estático.
-
-### Previsualización de la Construcción
-
-Para previsualizar la versión construida en tu entorno local, ejecuta:
-
-```bash
-npm run preview
-```
-
-o con `yarn`:
-
-```bash
-yarn preview
-```
-
-Esto levantará un servidor para previsualizar la aplicación construida, que estará disponible en:
-
-```
-http://localhost:4173
-```
-
-## Estructura del Proyecto
-
-Este proyecto sigue la estructura típica de un proyecto Vite. Aquí hay una descripción básica de algunos de los archivos y carpetas clave:
-
-- `index.html`: El archivo HTML principal.
-- `src/`: Carpeta donde reside el código fuente de la aplicación.
-  - `main.js`: El archivo de entrada principal para la aplicación.
-  - `components/`: Carpeta donde se encuentran los componentes de la aplicación.
-- `public/`: Carpeta para archivos estáticos que serán copiados al directorio de construcción.
+Las contribuciones son bienvenidas. Si tienes sugerencias, encuentras algún error o deseas colaborar, siéntete libre de abrir un issue o pull request.
